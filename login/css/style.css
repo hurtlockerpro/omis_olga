@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans';
+}
+.container {
+    width: 250px;
+    margin: auto;
+}
+
+h1{
+    font-size: 24px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+input[name="username"], input[name="password"] {
+    border: 0px;
+    border-bottom: 2px solid gray;
+    margin: 10px;
+    outline: none;
+    width: 100%;
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+
+    -webkit-box-shadow: 0px 0px 15px -4px #000000; 
+    box-shadow: 0px 0px 15px -4px #000000;
+
+    border-radius: 15px;
+    
+    outline: none;
+    margin: 10px;
+}
+
+

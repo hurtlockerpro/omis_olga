@@ -1,0 +1,21 @@
+
+/* ID */
+#hdr{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+/* class */
+.hdrBG {
+    background-color: blue !important;
+}
+
+.hdrFnt {
+    color: rebeccapurple;
+    font-size: large;
+}
+
+.bg1 {}
+.bg2 {}
+.bg3 {}
+
