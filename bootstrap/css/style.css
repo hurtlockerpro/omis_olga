@@ -1,0 +1,27 @@
+
+.container {
+    height: 300px;
+    background-color: bisque;
+}
+
+
+
+.fa-html5, .fa-java{
+    font-size: 24px;
+}
+
+.rounded-icon {
+    border: 5px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.rounded-icon .fa-html5, .rounded-icon .fa-java{
+    position: relative;
+    top: 9px;
+    left: 11px;
+}
+.progress {
+    margin-top: 15px;
+}
