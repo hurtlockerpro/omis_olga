@@ -164,3 +164,126 @@ console.log(`a1 = ${ a1 }`);
 console.log(`a2 = ${ a2 }`);
 console.log(`a3 = ${ a3 }`);
 console.log(`a4 = ${ a4 }`);
+
+
+// TABLITSA UMNOZENIJA
+
+
+let rows = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let cols = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+let table = '' 
+let tr = '' // '<tr>' + ... + '</tr>'
+let td = ''  // '<td>' +  ... +  '</td>'
+let th = ''
+
+rows.forEach(function (row, rowIndex) {
+
+    td = ''
+    cols.forEach(function (col, colIndex) {
+        //console.log("row: " + row + ", col: " + col + ", result: " + (row * col));
+        if (rowIndex == 0) th += `<td class="fistCol">${ rows[colIndex] }</td>`
+        if (colIndex == 0) td += `<td class="fistCol">${ cols[rowIndex] }</td>`
+
+        td += `<td>${ row * col }</td>` 
+    })
+    // 
+    if (rowIndex == 0) tr += `<tr><td>-</td>${ th }</tr>`
+    tr += `<tr>${ td }</tr>`
+})
+// 
+table = `<table class="table table-striped">${ tr }</table>`
+
+let myBox = document.getElementById("mytable");
+myBox.innerHTML = table // '<b>this is my text</b>'
+
+console.log(myBox.innerHTML)
+
+/*  NEW PROJECT > MENU */
+
+let menuItems = []
+
+// 1
+let myMenuItems = document.getElementById("menuItems");
+
+// 2
+let myInput = document.querySelector("input[name=item]")
+
+// 3
+let btn = document.getElementsByClassName("btn")
+console.log(btn)
+for (let index = 0; index < btn.length; index++) {
+    //const element = array[index];
+    console.log("OBJ: ", btn[index])
+}
+
+// 1 
+function getValue(){
+    console.log(myInput.value)
+    return myInput.value
+}
+
+// 2 
+btn[0].addEventListener('click', (event) => {
+    //console.log('CLICK')
+    //console.log(event)
+
+    //console.log( generateA(getValue()) )
+    addMeniItem(generateA(getValue()))
+    displayMenuItems()
+})
+
+btn[0].addEventListener('dblclick', (event) => {
+
+    console.log('DBLCLICK')
+    console.log(event)
+})
+
+function generateA(name, title = 'This is menu item'){
+    // <a href="#" title="This is title">this is link</a>
+    return '<a href="#" title="' + title + '">' + name + '</a>'
+}
+
+
+function addMeniItem(menuItem){
+    menuItems.push(menuItem)
+}
+
+function displayMenuItems()
+{
+    /*
+    let a = ''
+    for (let index = 0; index < menuItems.length; index++) {
+        a += menuItems[index];
+    }
+    */
+    myMenuItems.innerHTML = menuItems.join(' | ')
+}
+
+class Square {
+    width = 0;
+    height = 0;
+    setWidth(width){
+        this.width = width
+    }
+    setHeight(height){
+        this.height = height
+    }
+    displaySquare(){
+        return `<div style="width:${this.width}px;height:${this.height}px;border:1px solid black;"></div>`
+    }
+}
+
+let square = new Square()
+square.setWidth(25)
+square.setHeight(25)
+myMenuItems.innerHTML += square.displaySquare()
+
+//let square2 = new Square()
+square.setWidth(50)
+square.setHeight(25)
+myMenuItems.innerHTML += square.displaySquare()
+
+square.setWidth(150)
+square.setHeight(50)
+myMenuItems.innerHTML += square.displaySquare()
