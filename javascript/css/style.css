@@ -12,7 +12,15 @@ table tr:nth-child(odd){
 }
 */
 
-table {
-    width: 200px;
-    height: 200px;
+
+
+input[name="numbers"]{
+    width: 100% !important;
+}
+
+.form-group{
+    margin-bottom: 0 !important;
+}
+.col.header {
+    padding: 0 !important;
 }

@@ -263,10 +263,17 @@ function displayMenuItems()
 class Square {
     width = 0;
     height = 0;
+
+    constructor(width = 0, height = 0)
+    {
+        this.setHeight(height)
+        this.setWidth(width)
+    }
+
     setWidth(width){
         this.width = width
     }
-    setHeight(height){
+    static setHeight(height){
         this.height = height
     }
     displaySquare(){
@@ -274,16 +281,19 @@ class Square {
     }
 }
 
-let square = new Square()
-square.setWidth(25)
-square.setHeight(25)
-myMenuItems.innerHTML += square.displaySquare()
+//let square1 = new Square(25, 25)
+Square.setHeight(25)
 
-//let square2 = new Square()
-square.setWidth(50)
-square.setHeight(25)
-myMenuItems.innerHTML += square.displaySquare()
+//square.setWidth(25)
+//square.setHeight(25)
+myMenuItems.innerHTML += square1.displaySquare()
 
+let square2 = new Square(50, 150)
+//square.setWidth(50)
+//square.setHeight(25)
+myMenuItems.innerHTML += square2.displaySquare()
+/*
 square.setWidth(150)
 square.setHeight(50)
 myMenuItems.innerHTML += square.displaySquare()
+*/
