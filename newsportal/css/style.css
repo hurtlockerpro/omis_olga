@@ -1,0 +1,17 @@
+
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+
+#test{
+    width: 150px;
+    height: 150px;
+    background-color: cadetblue;
+    position: relative;
+}
