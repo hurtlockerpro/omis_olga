@@ -122,3 +122,12 @@ log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
 log(chalk.hex('#DEADED').bold('Bold gray!'));
 
 
+
+// 
+// MY MODULE IMPORT 
+//
+import { Colors } from './myclass'
+const mydiv = new Colors('red', '#189E25');
+console.log (mydiv.showDiv())
+
+

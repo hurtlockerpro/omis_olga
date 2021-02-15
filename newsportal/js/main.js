@@ -83,15 +83,7 @@ $(document).ready(function () {
 function runNewsQuery(link) {
   $.ajax({
     url: link, //"content.html",
-    success: function( result ) {
-      //$("#test").html(result);
-      console.log(result)
-
-      let news = new News(result) // result.articles[0]
-      //news.parseData()
-      //console.log(news.generateAllNewsCards())
-      $('#newsContainer').html(news.generateAllNewsCards())
-    },
+    this
     error: function(err, errorMessage, errObject) {
         console.log('err: ', err)
         console.log('errorMessage: ', errorMessage)

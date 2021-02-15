@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var x1 = 10;
 var str = "Hello TypeScript";
 var decimal = 6;
@@ -79,3 +81,9 @@ log("\nCPU: " + chalk.red('90%') + "\nRAM: " + chalk.green('40%') + "\nDISK: " +
 log(chalk.keyword('orange')('Yay for orange colored text!'));
 log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
 log(chalk.hex('#DEADED').bold('Bold gray!'));
+// 
+// MY MODULE IMPORT 
+//
+var myclass_1 = require("./myclass");
+var mydiv = new myclass_1.Colors('red', '#189E25');
+console.log(mydiv.showDiv());
